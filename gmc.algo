@@ -1,0 +1,26 @@
+ALGORITHM Algo1
+VAR
+    str : STRING
+    nb_char: INTEGER := 0;
+    nb_word : INTEGER := 0;
+    nb_vow : INTEGER := 0;
+    c : CHAR :=""
+
+BEGIN
+    Write ("Hello world.")
+    Read(str);
+
+    WHILE (c <> ".") DO
+        Read(c);
+        nb_char := nb_char + 1;
+        IF (c = " ") THEN
+            nb_word := nb_word + 1;
+        END_IF
+        IF (c = "a" OR c ="e" OR c ="i" OR c = "u") THEN
+            nb_vow := nb_vow + 1;
+        END_IF
+END_WHILE
+    Write("number of characters: ", nb_char+1 )
+    Write("number of words: ", nb_word+1 )
+    Write("number of vowls: ", nb_vow+1 )
+END
